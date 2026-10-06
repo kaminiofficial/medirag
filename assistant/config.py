@@ -13,6 +13,9 @@ LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT")
 MODEL_NAME = "openai/gpt-oss-120b"
 EMBEDDING_MODEL_NAME = "jina-embeddings-v3"
 
+
+DATA_PATH = os.path.join('data','medical.pdf')
+
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 

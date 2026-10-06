@@ -1,0 +1,55 @@
+2026-08-12 13:02:11,007 | WARNING | langchain_community.utils.user_agent | USER_AGENT environment variable not set, consider setting it to identify your requests.
+2026-08-12 13:02:11,538 | INFO | __main__ | Loading the assistant...
+2026-08-12 13:02:11,538 | INFO | assistant.pipeline | Building assistant...
+2026-08-12 13:02:11,538 | INFO | assistant.tracing | Checking if tracing is enabled...
+2026-08-12 13:02:11,538 | INFO | assistant.tracing | Tracing is not enabled.plz turn it on
+2026-08-12 13:02:11,539 | INFO | assistant.pipeline | Building vector store...
+2026-08-12 13:02:11,539 | INFO | assistant.vector_store | Checking if vector store exists at C:\Users\KAMINI TYAGI\OneDrive\Documents\Desktop\rag2\rag2env\faiss_index
+2026-08-12 13:02:11,540 | INFO | assistant.pipeline | Loading existing vector store...
+2026-08-12 13:02:11,540 | INFO | assistant.embeddings | Initializing Jina embeddings... jina-embeddings-v3
+2026-08-12 13:02:11,549 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-08-12 13:02:11,549 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-12 13:02:11,550 | INFO | faiss.loader | Loading faiss.
+2026-08-12 13:02:13,046 | INFO | faiss.loader | Successfully loaded faiss.
+2026-08-12 13:02:13,224 | INFO | assistant.vector_store | Vector store loaded successfully.
+2026-08-12 13:02:13,225 | INFO | assistant.pipeline | Vector store loaded successfully.
+2026-08-12 13:02:13,227 | INFO | assistant.vector_store | Retriever created successfully.
+2026-08-12 13:02:13,230 | INFO | assistant.llm | loading the model openai/gpt-oss-120b
+2026-08-12 13:02:14,886 | INFO | assistant.agent | Langchain agent created successfully!
+2026-08-12 13:02:14,887 | INFO | assistant.pipeline | Assistant built successfully.
+2026-08-12 13:02:14,887 | INFO | __main__ | Assistant loaded successfully!
+2026-08-12 13:03:06,584 | INFO | __main__ | === Streamlit run: new question received ===
+2026-08-12 13:03:06,586 | INFO | assistant.pipeline | Asking question: what is ai agents
+2026-08-12 13:03:08,722 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-12 13:03:08,741 | INFO | assistant.pipeline | Received answer: **AI agents** are autonomous software (or sometimes robotic) entities that perceive their environment, make decisions, and take actions in order to achieve specific goals.  
+
+### Core components
+| Component | What it does |
+|-----------|--------------|
+| **Perception (sensors)** | Collects data from the environment (e.g., text input, camera images, game state). |
+| **Reasoning / Decision‑making** | Processes the perceived data, often using machine‑learning models, planning algorithms, or rule‑based logic, to decide what to do next. |
+| **Action (actuators)** | Executes the chosen action (e.g., sending a message, moving a robot arm, changing a game character’s move). |
+| **Learning (optional)** | Updates its internal model from experience to improve future performance. |
+
+### Types of AI agents
+| Type | Typical domain | Example |
+|------|----------------|---------|
+| **Software agents** | Information retrieval, recommendation, chat, automation | A virtual personal assistant that schedules meetings. |
+| **Embodied agents (robots)** | Physical interaction with the world | A warehouse robot that picks and places items. |
+| **Game agents** | Simulated environments | NPCs (non‑player characters) that adapt to a player’s strategy. |
+| **Multi‑agent systems** | Distributed problem solving, coordination | Swarms of drones cooperating to map an area. |
+
+### How they work (high‑level flow)
+1. **Sense** – Gather raw data from the environment.  
+2. **Interpret** – Convert raw data into a useful representation (e.g., feature extraction, language parsing).  
+3. **Plan/Decide** – Use a model (rules, reinforcement‑learning policy, planning algorithm) to select the best action given the current state and goal.  
+4. **Act** – Perform the chosen action, which changes the environment.  
+5. **Learn (optional)** – Update the model based on the outcome to improve future decisions.
+
+### Why they matter
+- **Autonomy**: They can operate with little or no human supervision.  
+- **Adaptability**: Learning‑enabled agents can improve over time or adjust to new situations.  
+- **Scalability**: In multi‑agent setups, many agents can work together to solve problems that would be hard for a single system.
+
+In short, an AI agent is any system that **perceives**, **decides**, and **acts**—often powered by machine‑learning techniques—to accomplish tasks on its own or in collaboration with other agents.
